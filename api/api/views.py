@@ -8,5 +8,3 @@ def homepage(request):
 def about(request):
     #return HttpResponse("About page")
     return render(request, 'about.html')
-
-    
