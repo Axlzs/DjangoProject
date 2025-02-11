@@ -18,7 +18,11 @@
         <a href="/about" title = "About section">About </a>|
         <a href="{% url 'posts:list' %}"  title = "See posts" >Posts </a>|
         <a href="{% url 'users:register' %}" title = "Register a new user">Register </a>|
-        <a href="{% url 'users:login' %}" title = "Existing user">Login </a>
+        <a href="{% url 'users:login' %}" title = "Existing user">Login </a>|
+        <form class = "logout" action="{% url 'users:logout' %}" method = "post">
+            {% csrf_token %}
+            <button class="logout-button" title="Logout user">Logout</button>
+        </form>
     </nav>
     <main>
         {% block content %}
